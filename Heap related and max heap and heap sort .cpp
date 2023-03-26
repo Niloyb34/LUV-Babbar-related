@@ -42,15 +42,16 @@ public:
 };
 //////////////////////////Heapify algorithm jar time complexity hbe o(logn) ja ei time e max heap make kori de
 void heapify(int arr[],int n,int i)///mane je array tar modde heapify korbo seta arr[] ,array size n,i hocce index of array mane 0 tmo index e -1 reke bakigula teke start korbo aikane amra max heap ta find out korci
-{///min heap ber korte hole tkon github e ase ba coding ninjas  e ase
+{
+    ///min heap ber korte hole tkon github e ase ba coding ninjas  e ase
     int largest=i;
     int left=2*i;
     int right=2*i+1;
-    if(left<n&&arr[largest]<arr[left])
+    if(left<=n&&arr[largest]<arr[left])
     {
         largest=left;
     }
-    if(right<n&&arr[largest]<arr[right])
+    if(right<=n&&arr[largest]<arr[right])
     {
         largest=right;
     }
@@ -58,6 +59,18 @@ void heapify(int arr[],int n,int i)///mane je array tar modde heapify korbo seta
     {
         swap(arr[largest],arr[i]);
         heapify(arr,n,largest);
+    }
+}
+void heapSort(int arr[],int n)
+{
+    int size=n;
+    while(size>1)
+    {
+        ///Step1-->swap the root elements with last node or element
+        swap(arr[size],arr[1]);///mane last node er sathe first node er modde swap korbo
+        size--;
+        ///step-->2 Take the root node to the correct position
+        heapify(arr,size,1);///root node mane holo 1st index
     }
 }
 int main()
@@ -71,6 +84,7 @@ int main()
     h.print();
     int arr[6]= {-1,54,53,55,52,50};
     int n=5;
+    ///Heap creation
     for(int i=n/2; i>0; i--) ///building a heep ata o(n) complexity te reach kore jie aikane amra 1 based indexing korci mane
     {
         heapify(arr,n,i);
@@ -79,6 +93,16 @@ int main()
     for(int i=1; i<=n; i++)
     {
         cout<<arr[i]<<"  ";
+    }
+    cout<<endl;
+
+
+    //heapsort
+    heapSort(arr,n);
+    cout<<"Printing the sorted array now:"<<endl;
+    for(int i=1; i<=n; i++)
+    {
+        cout<<arr[i]<<" ";
     }
     cout<<endl;
     return 0;
