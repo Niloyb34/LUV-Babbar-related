@@ -55,4 +55,14 @@ int main()
        ///printing graph
        g.printAdjList();
 }
+////input formate.
+Enter the number of nodes :5
 
+Enter the number of edges :6
+
+0 1
+1 2
+2 3
+3 1
+3 4
+0 4
