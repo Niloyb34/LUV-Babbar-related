@@ -3,7 +3,8 @@
 #include<unordered_map>
 #include<list>
 using namespace std;
-template <typename T> ////Ei template use korle only  graph<char>g; and char u,v; aikane data type change korlei hbe mane datatype easily shift kora jabe
+template <typename T> ////Ei template use korle only  graph<char>g; and char u,v; aikane data type change korlei hbe mane datatype easily shift kora jabe 
+////AIKANE AGER generic template  ta amra kintu use kori nie amne just next code er jnno rakcilam
 class graph
 {
 public:
