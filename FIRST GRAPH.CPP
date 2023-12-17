@@ -50,7 +50,7 @@ int main()
              int  u,v;
              cin>>u>>v;
              //Creating an undirected graph
-             g.addEdge(u,v, 0);
+             g.addEdge(u,v, 0);//every edge er respect e duita vertex dukbe input hisebe u and v
        }
        ///printing graph
        g.printAdjList();
