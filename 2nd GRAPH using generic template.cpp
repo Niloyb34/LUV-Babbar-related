@@ -3,7 +3,7 @@
 #include<unordered_map>
 #include<list>
 using namespace std;
-template <typename T> ////Ei template use korle only  graph<char>g; and char u,v; aikane data type change korlei hbe mane datatype easily shift kora jabe
+template <typename T> ////Ei template use korle only  graph<char>g; and char u,v; aikane data type change korlei hbe mane datatype easily shift kora jabe mane void addEdge oikane change er drkar nie
 class graph
 {
 public:
@@ -51,3 +51,14 @@ int main()
        ///printing graph
        g.printAdjList();
 }
+////input formate.
+Enter the number of nodes :5
+
+Enter the number of edges :6
+
+0 1
+1 2
+2 3
+3 1
+3 4
+0 4
